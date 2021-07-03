@@ -1,7 +1,8 @@
 defmodule Pipeline do
     def pipe(input) do
       input
-      |> String.downcase()
+      |> String.downcase
+      |> IO.inspect
       |> String.split(",")
       |> Enum.uniq
       |> IO.puts
