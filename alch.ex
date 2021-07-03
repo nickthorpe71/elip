@@ -1,5 +1,9 @@
-defmodule Alch do
-  def read_my_file(filename) do
-    File.read(filename)
-  end
+defmodule Pipeline do
+    def pipe(input) do
+      input
+      |> String.downcase()
+      |> String.split(",")
+      |> Enum.uniq
+      |> IO.puts
+    end
 end
